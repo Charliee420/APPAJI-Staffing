@@ -1,7 +1,12 @@
 const WA_NUMBER = "919876543210";
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzjP6oZIUV9sHXvg7vCh9kAdTzEVQlRJGfA-uN5hFI-l2TzQUekXq8R5fRV8F0Gmto5iQ/exec";
 function toggleNav(){const n=document.getElementById("mainNav");const o=document.getElementById("navOverlay");const open=n&&!n.classList.contains("open");if(n)n.classList.toggle("open",open);if(o)o.classList.toggle("show",!!open);document.body.classList.toggle("nav-open",!!open)}
 function closeNav(){const n=document.getElementById("mainNav");const o=document.getElementById("navOverlay");if(n)n.classList.remove("open");if(o)o.classList.remove("show");document.body.classList.remove("nav-open")}
 function waLink(msg){return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg)}
+function saveToSheet(payload){
+if(!SHEET_ENDPOINT)return Promise.resolve();
+try{return fetch(SHEET_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(payload)}).catch(()=>{})}catch(err){return Promise.resolve()}
+}
 function bindQuoteForms(){
 document.querySelectorAll("[data-wa-form]").forEach(f=>{
 f.addEventListener("submit",e=>{
@@ -12,6 +17,9 @@ const company=(d.get("company")||"").toString();
 const service=(d.get("service")||"").toString();
 const phone=(d.get("phone")||"").toString();
 const message=(d.get("message")||"").toString();
+const btn=f.querySelector('button[type="submit"]');
+if(btn){btn.disabled=true;const old=btn.textContent;btn.textContent="Sending...";setTimeout(()=>{btn.disabled=false;btn.textContent=old},2500)}
+saveToSheet({timestamp:new Date().toISOString(),name:name,company:company,service:service,phone:phone,message:message,page:location.href});
 window.open(waLink("New Enquiry - Appaji Staffing\n\nName: "+name+"\nCompany: "+company+"\nService: "+service+"\nPhone: "+phone+"\nMessage: "+message),"_blank");
 });
 });
