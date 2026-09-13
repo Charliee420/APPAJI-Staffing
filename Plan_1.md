@@ -8,38 +8,45 @@
 | Industry | Manpower & Facility Management Services |
 | Tagline (hero) | "Manpower & Facility Solutions You Can Trust." |
 | Sub-tagline | "YOUR PEOPLE. YOUR PLACE. OUR RESPONSIBILITY." |
-| Services strip | Security · Housekeeping · Civil Work · Pantry · Plumbing · Carpentry · Garden Services |
+| Services strip | Security · Housekeeping · Pest Control · Electric · Plumbing · Garden · Painting · Civil Work · Carpentry · Pantry · Eldercare · Child Care · Driver · Receptionist |
 | Brand tone | Professional, trustworthy, no-nonsense, service-industry B2B |
 | Goal | A clean, credible marketing site that converts visiting facility managers / HR heads / housing societies into enquiry leads |
 
 ## 2. Objectives
 
 1. Establish trust fast — a staffing/facility company lives or dies on perceived reliability.
-2. Clearly communicate the full service catalog (7 services) without overwhelming the visitor.
-3. Make "Request a Quote / Contact Us" the dominant call-to-action on every page.
+2. Clearly communicate the full service catalog (14 services) with rich visual imagery and scope matrices.
+3. Make "Request a Quote / Contact Us" the dominant call-to-action on every page via instant WhatsApp.
 4. Be usable on mobile — most first contact will come via WhatsApp/Google search on phones.
-5. Rank for local + service-intent search ("security guard services Bengaluru", "housekeeping staffing company", etc.) — depends on final `[city]` info still pending from client info.
+5. Rank for local + service-intent search ("security guard services Bengaluru", "housekeeping staffing company", etc.).
+6. Incorporate high-trust client testimonials in an interactive rolling (sliding) carousel.
 
 ## 3. Information Architecture / Sitemap
 
 ```
 Home
-├── About Us (Overview, Vision, Mission, Why Choose Us)
-├── Services
+├── About Us (Story, Vision, Mission, Leadership Team, 7 Pillars)
+├── Services (Catalog of 14 Services)
 │   ├── Security Guard Services
 │   ├── Housekeeping Services
-│   ├── Civil Work Services
-│   ├── Pantry Services
+│   ├── Pest Control Services
+│   ├── Electric Services & AMC
 │   ├── Plumbing Services
-│   ├── Garden Services
-│   └── Carpenter Services
-├── Why Appaji (trust/differentiators — could fold into About)
-├── Careers / Join Our Workforce (optional — good for lead gen of staff too)
-├── Contact Us (form + phone/email/address + map)
-└── (Optional) Testimonials / Clients
+│   ├── Landscaping & Garden Services
+│   ├── Painting & Waterproofing
+│   ├── Civil Work Services
+│   ├── Carpenter Services
+│   ├── Pantry & Café Services
+│   ├── Eldercare Specialist Services
+│   ├── Child Care Services
+│   ├── Personal Car Driver Services
+│   └── Receptionist Services
+├── FAQ (7 Comprehensive Facility Questions & Answers)
+├── Gallery (Filterable photo showcase of workforce in action)
+├── Careers / Join Our Workforce (Supply-side recruitment funnel)
+├── Contact Us (Form + Direct WhatsApp + Telegram + Instagram + Map)
+└── Rolling Testimonials Slider (Brigade Panorama, Brigade Orchards, Assetz Marq, etc.)
 ```
-
-Recommend a **single-page scroll site with anchor nav** for v1 (faster to build, matches the size of the business) OR a **multi-page site** if the client wants each service to be its own SEO-indexable page. Decision needed — see Open Questions.
 
 ## 4. Page-by-Page Content Plan
 
